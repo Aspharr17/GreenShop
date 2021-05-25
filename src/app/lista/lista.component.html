@@ -1,0 +1,54 @@
+<div class="animated fadeIn fast mb-5 pb-5">
+    <h1>
+        Lista de plantas
+    </h1>
+    <hr>
+    <!-- ======================= Botón ======================== -->
+    <div class="row">
+        <div class="col text-right">
+            <button routerLink="/formulario/nuevo" class="btn btn-primary">
+            <i class="fa fa-plus"></i>
+            Agregar
+        </button>
+        </div>
+    </div>
+    <!-- ======================= Lista ======================== -->
+    <table class="container table mt-3 mb-3 animated fadeIn faster">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Costo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Maguey</td>
+                <td>Exterior</td>
+                <td>Soporta climas bruscos</td>
+                <td>0.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ======================= Cargando ======================== -->
+    <div class="alert alert-info text-center mt-3">
+        <h4 class="alert-heading"> Cargando</h4>
+        <p>
+            <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+        </p>
+        <p class="mb-0">
+            Espero, por favor
+        </p>
+    </div>
+
+    <!-- ======================= Alertas ======================== -->
+    <div class="alert alert-warning text-center mt-3">
+        <h4 class="alert-heading"> No hay registros</h4>
+        <p>
+            <i class="fa fa-exclamation fa-2x"></i>
+        </p>
+    </div><br><br><br><br>
+</div>

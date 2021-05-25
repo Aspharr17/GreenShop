@@ -1,0 +1,83 @@
+<div class="animated fadeIn fast">
+    <div class="container mt-5 mb-5">
+        <img class="img img-fluid" src="assets/img/plantas/flores.jpg" alt="imagen de pastel">
+    </div>
+    <h1>Nueva planta <small><br> Agrega un nuevo registro</small></h1>
+    <hr>
+    <div class="row text-right">
+        <div class="col">
+            <button class="btn btn-danger" routerLink="/lista">
+            <i class="fa fa-arrow-left"></i> Regresar
+        </button>
+        </div>
+    </div>
+    <!-- ============================= Form ============================== -->
+    <div class="row animated fadeIn faster">
+        <div class="col">
+            <form autocomplete="off" (ngSubmit)="guardar( forma )" #forma="ngForm">
+                <!-- Firebase -->
+                <div class="form-group">
+                    <label>Firebase ID</label>
+                    <input type="text" class="form-control" placeholder="Firebase ID" name="id" disabled="disabled">
+                    <small class="form-text text-muted">Este campo es autogenerador</small>
+                </div>
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" placeholder="Ej. Cactus" name="nombre" [class.is-invalid]="nombre.invalid && nombre.touched" [ngModel]="planta.nombre" required minlength="5" #nombre="ngModel">
+                    <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">Mínimo 5 carácteres</small>
+                </div>
+                <!--  Tipo -->
+                <div>
+                    <label>Posición</label>
+                    <br>
+                    <div class="form-group">
+
+                        <!-- Exterior -->
+                        <button class="btn btn-outline-warning mr-2" type="button">
+                <i class="fa fa-sun"></i> Exterior
+                </button>
+                        <!-- Interior -->
+                        <button class="btn btn-outline-success mr-2" type="button">
+                    <i class="fa fa-home"></i> Interiro
+                </button>
+                        <!-- Media Sombra -->
+                        <button class="btn btn-outline-primary" type="button">
+                    <i class="fa fa-cloud"></i> Sombra
+                </button>
+                    </div>
+                </div>
+                <!-- Descripcion -->
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Detalles</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Detalles de la planta." name="detalles" [class.is-invalid]="detalles.invalid && detalles.touched" [ngModel]="planta.detalles" required minlength="10" #detalles="ngModel"></textarea>
+                    <small *ngIf="detalles.invalid && detalles.touched" class="form-text text-danger">Mínimo 10 carácteres</small>
+                </div>
+                <!-- Costo -->
+                <div class="form-group">
+                    <label>Costo</label>
+                    <input type="text" class="form-control" placeholder="$ 0.00" name="costo" [class.is-invalid]="costo.invalid && costo.touched" [ngModel]="planta.costo" required minlength="2" #costo="ngModel">
+                    <small *ngIf="costo.invalid && costo.touched" class="form-text text-danger">Mínimo 2 carácteres</small>
+                </div>
+                <hr>
+                <div class="form-group text-center mt-5">
+                    <button type="submit" class="btn btn-primary w-50">
+                    <i class="fa fa-save"></i>  Guardar
+                </button>
+                </div>
+
+            </form>
+
+            <br>
+            <hr>
+            <!-- <pre>
+                Nombre:{{forma.valid}}<br>
+                Status: {{forma.status}}
+            </pre>
+            <pre>
+                {{forma.value | json }}
+            </pre> -->
+        </div>
+    </div>
+
+</div>

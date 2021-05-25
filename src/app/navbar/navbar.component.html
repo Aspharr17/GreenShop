@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark f-navbar">
+    <a class="navbar-brand font-weight-bold f-navbar mr-5" href="#">NeoPlants&nbsp;<i class="fas fa-seedling"></i></a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!-- Active -->
+            <li class="nav-item mr-4" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['nosotros']">Nosotros </a>
+            </li>
+            <li class="nav-item " routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['menu']">Menú</a>
+            </li>
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0 div-ordenar border border-light p-1">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['lista']">Agregar &nbsp;<i class="fas fa-plus-circle"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
