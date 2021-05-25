@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "greenshoptf": {
+      "hosting": {
+        "formulario": [
+          "greenshoptf"
+        ]
+      }
+    }
+  }
+}

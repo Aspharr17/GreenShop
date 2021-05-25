@@ -5,6 +5,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ListaComponent } from './lista/lista.component';
+import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
 
 const routes: Routes = [
   {path: 'carousel', component: CarouselComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'menu', component: MenuComponent},
   {path: 'nosotros', component: NosotrosComponent},
   {path: 'lista', component: ListaComponent},
+  {path: 'listaPlantas', component: ListaPlantasComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'carousel'}
 ];
 

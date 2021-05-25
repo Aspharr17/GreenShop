@@ -6,6 +6,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
 
+//Modulos Angular
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
@@ -16,6 +21,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListaComponent } from './lista/lista.component';
 import { from } from 'rxjs';
+import { ListaPlantasComponent } from './lista-plantas/lista-plantas.component';
 // import { format } from 'path';
 
 @NgModule({
@@ -27,13 +33,17 @@ import { from } from 'rxjs';
     CarouselComponent,
     NosotrosComponent,
     FooterComponent,
-    ListaComponent
+    ListaComponent,
+    ListaPlantasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
